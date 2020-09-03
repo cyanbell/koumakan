@@ -6,4 +6,5 @@ class Settings(BaseSettings):
     # App basic settings
     DEBUG: bool = Field(True, env="SAKUYA_DEBUG")
 
+
 settings = Settings()

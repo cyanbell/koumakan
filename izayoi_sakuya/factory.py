@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from .settings import settings
 from .middlewares import ServerErrorMiddleware
 
+
 def generate_app() -> FastAPI:
     """
     generate application instance
