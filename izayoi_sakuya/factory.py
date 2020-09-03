@@ -2,6 +2,7 @@ from fastapi import FastAPI
 
 from .settings import settings
 from .middlewares import ServerErrorMiddleware
+from .services import service_routers
 
 
 def generate_app() -> FastAPI:
@@ -17,5 +18,8 @@ def generate_app() -> FastAPI:
 
     # add middlewares
     app.add_middleware(ServerErrorMiddleware, debug=settings.DEBUG)
+
+    # register routes
+    app.include_router(service_routers, prefix="")
 
     return app
