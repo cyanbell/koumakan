@@ -1,5 +1,4 @@
 import os
-from os import name
 
 from fastapi import FastAPI
 from starlette.staticfiles import StaticFiles

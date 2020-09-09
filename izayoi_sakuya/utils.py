@@ -1,5 +1,4 @@
 import os
-from os import DirEntry
 
 from starlette.templating import Jinja2Templates
 
