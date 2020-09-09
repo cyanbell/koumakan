@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="{{ url_for('static', path='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', path='css/picnic.min.css') }}">
+</head>
+
+<body>
+    <div style="overflow: hidden;height: 5%;">
+
+        <nav class="demo">
+            <a href="{{ url_for('get_information_about_us') }}" class="brand">
+                <img class="logo" src="{{ url_for('static', path='img/logo.png') }}" />
+                <span>Koumakan</span>
+            </a>
+
+            <!-- responsive-->
+            <input id="bmenub" type="checkbox" class="show">
+            <label for="bmenub" class="burger pseudo button">&#8801;</label>
+
+            <div class="menu">
+                <a href="#" class="button icon-puzzle">Unavailable button</a>
+            </div>
+        </nav>
+
+    </div>
+
+    <h1>Nothing to say anymore.</h1>
+
+</body>
+
+</html>
