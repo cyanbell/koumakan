@@ -10,26 +10,25 @@
 </head>
 
 <body>
-    <div style="overflow: hidden;height: 5%;">
+    <nav>
+        <a href="#" class="brand">
+            <img class="logo" src="{{ url_for('static', path='img/logo.png') }}" />
+            <span>Koumakan</span>
+        </a>
 
-        <nav class="demo">
-            <a href="{{ url_for('get_information_about_us') }}" class="brand">
-                <img class="logo" src="{{ url_for('static', path='img/logo.png') }}" />
-                <span>Koumakan</span>
-            </a>
+        <input id="bmenub" type="checkbox" class="show">
+        <label for="bmenub" class="burger pseudo button">&#8801;</label>
 
-            <!-- responsive-->
-            <input id="bmenub" type="checkbox" class="show">
-            <label for="bmenub" class="burger pseudo button">&#8801;</label>
+        <div class="menu">
+            <a href="{{ url_for('get_information_about_us') }}" class="button">About Us</a>
+        </div>
+    </nav>
 
-            <div class="menu">
-                <a href="#" class="button icon-puzzle">Unavailable button</a>
-            </div>
-        </nav>
-
-    </div>
-
-    <h1>Nothing to say anymore.</h1>
+    <main class="flex five center" style="padding-top: 3em;">
+        <section class="half" style="text-align: center;">
+            <h1>Nothing to say anymore.</h1>
+        </section>
+    </main>
 
 </body>
 
