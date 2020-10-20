@@ -30,6 +30,9 @@ class SoftDeleteQuerySet(QuerySet, AwaitableQuery[MODEL]):
         "_having",
         "_custom_filters",
         "_group_bys",
+        "_select_for_update",
+        "_select_related",
+        "_select_related_idx",
     )
 
     def _clone(self) -> "SoftDeleteQuerySet[MODEL]":
@@ -55,6 +58,9 @@ class SoftDeleteQuerySet(QuerySet, AwaitableQuery[MODEL]):
         queryset._having = copy(self._having)
         queryset._custom_filters = copy(self._custom_filters)
         queryset._group_bys = copy(self._group_bys)
+        queryset._select_for_update = self._select_for_update
+        queryset._select_related = self._select_related
+        queryset._select_related_idx = self._select_related_idx
         return queryset
 
     def delete(self) -> "UpdateQuery":
