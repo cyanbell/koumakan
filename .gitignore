@@ -58,3 +58,6 @@ venv.bak/
 # Chore
 *.log
 .vscode/
+
+# Rust
+target/
